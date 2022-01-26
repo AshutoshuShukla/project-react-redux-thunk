@@ -9,9 +9,10 @@ function App() {
   return (
     <React.Fragment>
       <Information/>
+    App
       <Switch>
         <Route exact path={"/"} component={Dashboard}/>
-        <Route exact path="/todo" component={Todo}/>
+        <Route exact path="/todos" component={Todo}/>
         <Route exact path="/users" component={Users}/>
       
       </Switch>

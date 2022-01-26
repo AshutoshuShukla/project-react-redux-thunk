@@ -38,8 +38,10 @@ export default function CustomizedTables({tableData,refinedColumnData}) {
         <TableHead>
           <TableRow>
             {/* {refinedColumnData.map((heading)=>{
-              console.log(heading.label);
-              <StyledTableCell align="right">{heading.label}</StyledTableCell>
+              console.log(heading);
+              <TableRow>
+              <StyledTableCell align="right">{heading}</StyledTableCell>
+              </TableRow>
             })} */}
             <StyledTableCell>UserName</StyledTableCell>
             <StyledTableCell >Name</StyledTableCell>

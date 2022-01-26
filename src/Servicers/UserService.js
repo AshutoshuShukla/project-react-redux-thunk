@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export async function getAllTodo(){
     return await axios.get("https://jsonplaceholder.typicode.com/todos")
-    .then((response)=>{console.log(response)
+    .then((response)=>{console.log("todoList",response)
     return response;
 }).catch((error)=>{
     console.log("Error",error.toJSON());
