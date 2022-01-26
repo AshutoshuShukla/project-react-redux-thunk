@@ -1,18 +1,23 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as action from '../store/actions/index'
-//import { showDeafult } from '../store/actions/todoActions';
+import CheckboxList from './CheckboxList';
 const Todo = () => {
   const dispatch =useDispatch();
-  const DefaultValues =useSelector((state)=>{return state.todoReducer.preloaded})
-  const AllTodoList =useSelector((state)=>{return state.UserReducer.TodoData})
+  const AllTodoList =useSelector((state)=>state.UserReducer.TodoData)
   useEffect(()=>{
-  action.showDeafult(dispatch);
   action.retriveAllTodosInfo(dispatch);
   },[])
-  console.log("from redux",DefaultValues);
-  console.log("TodoList",AllTodoList)
-  return <div>Add To cart</div>;
+  //console.log("from redux",DefaultValues);
+  console.log("AllTodoList",AllTodoList.data)
+  return Object.keys(AllTodoList).length !==0 ?
+  (
+
+  <React.Fragment>
+  <h3 style={{ paddingTop:"5em",display:'flex',justifyContent:"center"}}>TodoList</h3>
+  <CheckboxList data={AllTodoList.data}/>
+  </React.Fragment>
+    ):<div/>
 };
 
 export default Todo;

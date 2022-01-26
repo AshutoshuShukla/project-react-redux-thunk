@@ -14,26 +14,7 @@ const Users = () => {
 
     const refinedColumnData=()=>{
         return [
-            {
-                label:"Username",
-                id:"username",
-            },
-            {
-                label:"Name",
-                id:"name",
-            },
-            {
-                label:"Phone",
-                id:"phone",
-            },
-            {
-                label:"Email",
-                id:"email",
-            },
-            {
-                label:"Website",
-                id:"website",
-            },
+            "UserName","Name","Phone","Email ID","Phone No.","Website",
         ]
     }
   return Object.keys(UserList).length !==0 ?
